@@ -14,6 +14,6 @@ document.body.appendChild(image);
 
 //////
 
-import { init } from "./scripts/project-todo manager";
+import {init} from './scripts/init.js'
 
 init();
