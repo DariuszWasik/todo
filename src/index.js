@@ -1,19 +1,7 @@
-// src/index.js
-import "./styles.css";
-import { greeting } from "./greeting.js";
+import './styles.css'
 
-console.log(greeting);
-
-import odinImage from "./odin.png";
-   
-const image = document.createElement("img");
-image.src = odinImage;
-   
-document.body.appendChild(image);
-
-
-//////
 
 import {init} from './scripts/init.js'
 
 init();
+
