@@ -1,4 +1,5 @@
-import './styles.css'
+import './styles/mainPage.css'
+
 
 
 import {init} from './scripts/init.js'
