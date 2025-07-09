@@ -1,5 +1,6 @@
 import { Project, projectsArr } from "./project";
 import { ToDo } from "./todo";
+import { displayProjects } from "./DOM-all-projects-container";
 
 export function init () {
     console.log('siema')
@@ -21,4 +22,6 @@ teleankieta.assignToProject();
 
 const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci', '25/1/2025', 'low', 0);
 rozliczPodatek.assignToProject();
+
+displayProjects();
 }
