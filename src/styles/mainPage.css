@@ -54,9 +54,9 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-* {
+/* * {
     border: 1px purple solid;
-}
+} */
 
 /* ///////////////////////// */
 
@@ -118,4 +118,9 @@ body {
 .main {
     background: none;
     grid-area: main;
+}
+
+dialog {
+  background-color: black;
+  display: none;
 }
