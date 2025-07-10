@@ -12,10 +12,10 @@
 .add-project-dialog:([open]) {
     border: none;
 }
-
+/* 
 .add-project-dialog::backdrop{
     backdrop-filter: blur(2px)
-}
+} */
 .add-project-dialog {
     border: none;
     /* box-shadow: none; */
