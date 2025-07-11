@@ -2,6 +2,7 @@ import { Project, projectsArr } from "./project";
 import { ToDo } from "./todo";
 import { displayProjects } from "./DOM-all-projects-container";
 import { addProject } from "./add-new-project-button";
+import { displayAllTodos } from "./DOM-todoCard";
 
 export function init () {
     console.log('siema')
@@ -29,4 +30,5 @@ rozliczPodatek.assignToProject();
 function loadActions() {
     displayProjects();
     addProject()
+    displayAllTodos()
 }
