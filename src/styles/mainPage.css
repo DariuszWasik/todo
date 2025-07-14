@@ -54,9 +54,9 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/* * {
+* {
     border: 1px purple solid;
-} */
+}
 
 /* ///////////////////////// */
 
@@ -113,14 +113,20 @@ body {
     flex-direction: column;
     justify-content: space-around;
     /* display: none; */
+  
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2rem;
     background: none;
     grid-area: main;
 }
 
-dialog {
-  background-color: black;
-  display: none;
+.display-projects {
+  display: grid;
+  gap: 2rem;
 }
+

@@ -1,6 +1,8 @@
-import { projectsArr } from "./project";
+import '../styles/todoCard.css'
+import { allTodosArr, putAllTodosInAllTodosArray } from './todo';
+import { changeFinishedByCheckBox } from './finishTodo';
 
-const container = document.querySelector('.main');
+const container = document.querySelector('.display-projects');
 
 function createTodoCard(todo) {
  const todoCard = document.createElement('div');
@@ -9,6 +11,12 @@ function createTodoCard(todo) {
  upperText.className = 'todo-upper-text'
  const lowerText = document.createElement('div')
  lowerText.className = 'todo-lower-text'
+
+ //do checkboxa trzeba napisac jakis skryp zmieniajacy status todosa w wykonane (dodac do todo.js w classie)
+ const checkBox = document.createElement('input')
+ checkBox.className = 'finished';
+ checkBox.name = todo.todoID;
+ checkBox.type = 'checkbox'
  
  const todoName = document.createElement('p');
  todoName.className = 'todo-name';
@@ -20,7 +28,7 @@ function createTodoCard(todo) {
  todoDueDate.className = 'todo-date';
  todoDueDate.textContent = todo.dueDate;
 
- upperText.append(todoName, todoPriority, todoDueDate)
+ upperText.append(checkBox, todoName, todoPriority, todoDueDate)
 
  const todoDescription = document.createElement('p');
  todoDescription.className = 'todo-description';
@@ -38,12 +46,10 @@ function displayTodoCard(todo){
     container.append(todo)
 }
 
-export function displayAllTodos() {
-// projectsArr.map(a => a.todos).forEach(createTodoCard())
-const arr = projectsArr.map(a => a.todos);
-console.log(arr)
-arr.forEach(el => {
-    el.forEach(el => createTodoCard(el))
-})
 
+export function displayAllTodos() {
+putAllTodosInAllTodosArray(); 
+console.log(allTodosArr, 'alltodosarr')
+allTodosArr.forEach(a => createTodoCard(a))
+changeFinishedByCheckBox();
 }

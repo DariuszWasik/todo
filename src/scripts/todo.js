@@ -1,5 +1,5 @@
 import { projectsArr } from "./project";
-export {ToDo}
+export {ToDo, allTodosArr, putAllTodosInAllTodosArray}
 
 
 class ToDo {
@@ -11,8 +11,12 @@ class ToDo {
         this.projectID = projectID
     }
     
-     todoID = crypto.randomUUID()
-
+    todoID = crypto.randomUUID()
+    finished = false;  
+    
+    changeFinish(){
+        this.finished = !this.finished
+    }
 
     filterProjectByID(id){
       return projectsArr.filter((project) => project.id === id)
@@ -25,4 +29,11 @@ class ToDo {
         console.log(projectsArr)
     }
 
+}
+
+let allTodosArr = []
+function putAllTodosInAllTodosArray(){
+    allTodosArr = [];
+    projectsArr.map(a => a.todos).forEach(el => 
+        {el.forEach(a => allTodosArr.push(a))})
 }

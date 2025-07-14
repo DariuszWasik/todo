@@ -9,6 +9,8 @@ export function init () {
 // console.log(projectsArr);
 const zadania = new Project('zadania', 'do wykonania niebawem');
 zadania.putProjectInProjectsArr();
+const zadania2 = new Project('zadania inne', 'do przemyslenia');
+zadania2.putProjectInProjectsArr();
 const telefony = new Project('telefony', 'wazne kontakty')
 telefony.putProjectInProjectsArr();
 console.log(zadania, telefony);

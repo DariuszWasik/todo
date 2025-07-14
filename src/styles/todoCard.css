@@ -1,0 +1,9 @@
+.todo-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-upper-text {
+    display: flex;
+    justify-content: space-between;
+}
