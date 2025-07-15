@@ -2,6 +2,9 @@ import '../styles/todoCard.css'
 import { allTodosArr, putAllTodosInAllTodosArray } from './todo';
 import { changeFinishedByCheckBox } from './finishTodo';
 
+
+export { container, createTodoCard, displayTodoCard, displayAllTodos}
+
 const container = document.querySelector('.display-projects');
 
 function createTodoCard(todo) {
@@ -47,7 +50,7 @@ function displayTodoCard(todo){
 }
 
 
-export function displayAllTodos() {
+function displayAllTodos() {
 putAllTodosInAllTodosArray(); 
 console.log(allTodosArr, 'alltodosarr')
 allTodosArr.forEach(a => createTodoCard(a))

@@ -3,6 +3,7 @@ import { ToDo } from "./todo";
 import { displayProjects } from "./DOM-all-projects-container";
 import { addProject } from "./add-new-project-button";
 import { displayAllTodos } from "./DOM-todoCard";
+import { projectsButtonDisplayingItsTodos } from "./projectBtnDisplayTodos";
 
 export function init () {
     console.log('siema')
@@ -16,11 +17,11 @@ telefony.putProjectInProjectsArr();
 console.log(zadania, telefony);
 console.log(projectsArr);
 
-const zadzwonDoLekarza = new ToDo('zadzown do lekarz', 'zapytaj o recepte Ani', '1/2/2024', 'high', 1);
+const zadzwonDoLekarza = new ToDo('zadzown do lekarz', 'zapytaj o recepte Ani', '1/2/2024', 'high', 2);
 console.log(zadzwonDoLekarza)
 zadzwonDoLekarza.assignToProject();
 
-const teleankieta = new ToDo('zadzown energetyki', 'wez udzial w ankiecie', '1/4/2024', 'high', 1);
+const teleankieta = new ToDo('zadzown energetyki', 'wez udzial w ankiecie', '1/4/2024', 'high', 2);
 console.log(teleankieta);
 teleankieta.assignToProject();
 
@@ -31,6 +32,7 @@ rozliczPodatek.assignToProject();
 
 function loadActions() {
     displayProjects();
-    addProject()
-    displayAllTodos()
+    addProject();
+    displayAllTodos();
+    projectsButtonDisplayingItsTodos()
 }

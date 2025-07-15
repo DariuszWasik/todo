@@ -1,6 +1,6 @@
 import { Project, projectsArr } from "../project";
 import { displayProjects } from "../DOM-all-projects-container";
-
+import { projectsButtonDisplayingItsTodos } from "../projectBtnDisplayTodos";
 export {cancelNewProject, addNewProject} 
 
 const addProjectDialog = document.querySelector('.add-project-dialog')
@@ -26,6 +26,7 @@ function addNewProject() {
         const newProject = new Project (nameInput.value, descInput.value)
         projectsArr.push(newProject);
         displayProjects();
+        projectsButtonDisplayingItsTodos();
         closeDialog()        
 }
 )
