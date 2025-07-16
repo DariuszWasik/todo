@@ -32,7 +32,26 @@ export function createAddTodoModal() {
 
     dateDiv.append(dateLabel, dateInput)
 
-    
+    const priorityDiv = document.createElement('div');
+    const priorityLabel = document.createElement('label');
+    priorityLabel.for = 'priorityInput';
+    priorityLabel.className = 'priorityLabel';
+    priorityLabel.innerText = 'Priority:';
+
+    const priorityInput = document.createElement('select');
+    priorityInput.id = 'priorityInput';
+    const priorityValues = ['high', 'medium', 'low'];
+    priorityValues.forEach(el => {
+        const option = document.createElement('option');
+        option.value = el;
+        option.text = el;
+        priorityInput.add(option)
+    })
+
+    priorityDiv.append(priorityLabel, priorityInput)
+
+
+
     const selectProjectDiv = document.createElement('div');
     const selectProjectLabel= document.createElement('label');
     selectProjectLabel.for = 'selectProjectInput';
@@ -58,7 +77,7 @@ export function createAddTodoModal() {
     cancelBtn.innerText = 'Cancel'
 
 
-    todoDialog.append(header, nameInput, descInput,  dateDiv, selectProjectDiv, addBtn, cancelBtn)
+    todoDialog.append(header, nameInput, descInput,  dateDiv, priorityDiv, selectProjectDiv, addBtn, cancelBtn)
 
 
 }
