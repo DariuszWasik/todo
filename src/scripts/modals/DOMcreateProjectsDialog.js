@@ -1,8 +1,8 @@
 import './styles/addProjectModal.css'
-
-
+import { projectsNamesArr } from '../DOM-all-projects-container';
 
 export function createAddProjectModal() {
+    console.log(projectsNamesArr)
     const addProjectModal = document.querySelector('.add-project-dialog');
     
     const title = document.createElement('p');
@@ -28,7 +28,6 @@ export function createAddProjectModal() {
     descDiv.className = 'descDiv';
     descDiv.append(descLabel, descInput)
     
-    
     const addBtn = document.createElement('button');
     addBtn.className = 'addBtn';
     addBtn.innerText = 'Add'
@@ -41,5 +40,5 @@ export function createAddProjectModal() {
     btnDiv.append(addBtn, cancelBtn)
     
     
-    addProjectModal.append(title, nameDiv, descDiv, btnDiv);
+    addProjectModal.append(title, nameDiv,  descDiv, btnDiv);
 }

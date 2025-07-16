@@ -1,0 +1,17 @@
+.add-todo-dialog{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nameInput,
+.descInput,
+.dateInput {
+    background-color: antiquewhite;
+}
+
+.dateDiv{
+    display: flex;
+    gap: 1rem;
+}

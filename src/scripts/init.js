@@ -4,6 +4,9 @@ import { displayProjects } from "./DOM-all-projects-container";
 import { addProject } from "./add-new-project-button";
 import { displayAllTodos } from "./DOM-todoCard";
 import { projectsButtonDisplayingItsTodos } from "./projectBtnDisplayTodos";
+import { addTask } from "./addToDoBtn";
+
+
 
 export function init () {
     console.log('siema')
@@ -33,6 +36,7 @@ rozliczPodatek.assignToProject();
 function loadActions() {
     displayProjects();
     addProject();
+    addTask();   
     displayAllTodos();
     projectsButtonDisplayingItsTodos()
 }
