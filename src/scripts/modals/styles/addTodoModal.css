@@ -1,17 +1,65 @@
+
+
+
+.add-todo-dialog:not([open]){
+    display: none;
+}
+
+
+
 .add-todo-dialog{
+    border: none;
+    border-radius: 2rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: var(--backgroundColorModal);
+}
+
+.add-todo-dialog::backdrop{
+    backdrop-filter: blur(2px);
 }
 
 .nameInput,
 .descInput,
-.dateInput {
-    background-color: antiquewhite;
+.dateInput,
+#priorityInput,
+#selectProjectInput {
+    background-color: var(--areasColorModal);
 }
 
+.selectProjectDiv,
+.priorityDiv,
 .dateDiv{
     display: flex;
     gap: 1rem;
+    justify-content: end;
+}
+
+.dateInput,
+#selectProjectInput,
+#priorityInput{
+    width: 15ch;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.dateInput:hover,
+#selectProjectInput:hover,
+#priorityInput:hover{
+    opacity: 0.6;
+}
+
+.dateLabel,
+.priorityLabel,
+.selectProjectLabel{
+    width: 15ch;
+    text-align: center;
+}
+
+.addBtn,
+.cancelBtn {
+    align-self: center;
 }

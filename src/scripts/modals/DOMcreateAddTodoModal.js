@@ -33,6 +33,7 @@ export function createAddTodoModal() {
     dateDiv.append(dateLabel, dateInput)
 
     const priorityDiv = document.createElement('div');
+    priorityDiv.className = 'priorityDiv'
     const priorityLabel = document.createElement('label');
     priorityLabel.for = 'priorityInput';
     priorityLabel.className = 'priorityLabel';
@@ -53,6 +54,7 @@ export function createAddTodoModal() {
 
 
     const selectProjectDiv = document.createElement('div');
+    selectProjectDiv.className = 'selectProjectDiv'
     const selectProjectLabel= document.createElement('label');
     selectProjectLabel.for = 'selectProjectInput';
     selectProjectLabel.className = 'selectProjectLabel';

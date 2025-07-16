@@ -23,12 +23,19 @@ export { cancelNewTodo, addNewTodo }
         const dateInput = document.querySelector('.dateInput');
         const selectInput = document.querySelector('#selectProjectInput');
         const priorityInput = document.querySelector('#priorityInput')
-
+        
+        
         addTodoBtn.addEventListener('click', () => {
+            if(nameInput.value.length < 3){
+                nameInput.value = '';
+                nameInput.style.border = '3px solid red';
+                nameInput.placeholder = 'minimum 3 charackters!'
+            }
+            else {
         const projectToGo = projectsArr.filter(a => a.name == selectInput.value);
         const newTodo = new ToDo (nameInput.value, descInput.value, dateInput.value, priorityInput.value, projectToGo[0].id);
         console.log(newTodo)
         newTodo.assignToProject();
         closeTodoDialog();
-        })
+        }})
     }
