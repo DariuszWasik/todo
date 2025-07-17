@@ -1,9 +1,24 @@
 .todo-card{
+
+    margin: 0 3rem;
+    padding: 1rem;
+    border: 1px white solid;
     display: flex;
     flex-direction: column;
+    
+    background-blend-mode: darken;
 }
 
 .todo-upper-text {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1rem 1fr 5ch 15ch;
+    gap: 1rem;
     justify-content: space-between;
+    font-size: 2ren;
+}
+
+
+
+.todo-lower-text {
+    font-size: 1rem;
 }

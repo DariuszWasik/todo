@@ -28,7 +28,7 @@ const teleankieta = new ToDo('zadzown energetyki', 'wez udzial w ankiecie', form
 console.log(teleankieta);
 teleankieta.assignToProject();
 
-const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee dd MMM yyyy'), 'low', 0);
+const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee dd MMM'), 'low', 0);
 rozliczPodatek.assignToProject();
  loadActions();
 }

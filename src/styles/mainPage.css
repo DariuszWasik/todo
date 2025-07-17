@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 html, body {
     overflow: hidden;
 font-family: Arial, Helvetica, sans-serif;}
+
 body {
     background-color: var(--background-color);
     background-image: var(--background-image);
@@ -94,8 +95,8 @@ body {
 
 .content {
     color: var(--text-color);
-    font-weight: 700;
-    font-size: 1.5rem;
+    /* font-weight: 700; */
+    font-size: 1.2rem;
     position: absolute;
     width: 100%;
     height: 100vh;    
@@ -138,7 +139,41 @@ body {
 }
 
 .display-projects {
+  height: 65vh;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
+  /* scroll-behavior: smooth; */
+  /* scrollbar-width: 1rem; */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
+
+
+.display-projects {
+  --sb-track-color: #454f71;
+  --sb-thumb-color: #272130;
+  --sb-size: 10px;
+}
+
+.display-projects::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+.display-projects::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.display-projects::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .display-projects {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}

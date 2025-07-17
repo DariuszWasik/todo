@@ -8,7 +8,7 @@
 
 
 .add-todo-dialog{
-    border: none;
+    border: 1px white solid;
     border-radius: 2rem;
     margin: auto;
     display: flex;
