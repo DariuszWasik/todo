@@ -1,5 +1,6 @@
 import { projectsArr } from "./project";
 import { createTodoCard, displayTodoCard, container } from "./DOM-todoCard";
+import { changeFinishedByCheckBox } from "./finishTodo";
 
 export function projectsButtonDisplayingItsTodos() {
     const allProjects = document.querySelectorAll('.projectItem');
@@ -11,12 +12,9 @@ export function projectsButtonDisplayingItsTodos() {
             const clickedProject = projectsArr.filter(a => a.name == el.outerText)
             clickedProject[0].todos.forEach(el =>{
               createTodoCard(el);
-               
+              changeFinishedByCheckBox();
             })
-       
         })
-    
-
     })
 }
 

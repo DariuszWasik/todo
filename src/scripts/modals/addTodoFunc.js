@@ -1,6 +1,7 @@
 import { ToDo } from "../todo";
 import { projectsArr } from "../project";
-
+import { allTodosArr } from "../todo";
+import { putAllTodosInAllTodosArray } from "../todo";
    
 export { cancelNewTodo, addNewTodo }
 
@@ -29,13 +30,15 @@ export { cancelNewTodo, addNewTodo }
             if(nameInput.value.length < 3){
                 nameInput.value = '';
                 nameInput.style.border = '3px solid red';
-                nameInput.placeholder = 'minimum 3 charackters!'
+                nameInput.placeholder = 'minimum 3 characters'
             }
             else {
         const projectToGo = projectsArr.filter(a => a.name == selectInput.value);
         const newTodo = new ToDo (nameInput.value, descInput.value, dateInput.value, priorityInput.value, projectToGo[0].id);
         console.log(newTodo)
         newTodo.assignToProject();
+        putAllTodosInAllTodosArray()
+        console.log(allTodosArr, 'alltodosarr after add task button')        
         closeTodoDialog();
         }})
     }
