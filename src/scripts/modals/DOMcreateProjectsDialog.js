@@ -1,5 +1,4 @@
 import './styles/addProjectModal.css'
-import { projectsNamesArr } from '../DOM-all-projects-container';
 
 export function createAddProjectModal() {
     console.log(projectsNamesArr)

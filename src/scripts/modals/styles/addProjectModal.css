@@ -4,6 +4,9 @@
 .add-project-dialog:not([open]) {
     display: none;
 }
+
+
+
 .add-project-dialog:([open]) {
     border: none;
 }

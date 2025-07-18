@@ -5,7 +5,7 @@
     border: 1px white solid;
     display: flex;
     flex-direction: column;
-    
+    height: fit-content;
     background-blend-mode: darken;
 }
 

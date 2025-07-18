@@ -1,5 +1,7 @@
 .projectItem {
-    color: rgba(255, 217, 0, 0.498);
+    /* color: rgba(255, 217, 0, 0.498); */
     list-style: none;
     font-style: italic;
+    /* text-align: left; */
+    padding: 0;
 }
