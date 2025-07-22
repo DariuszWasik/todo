@@ -4,12 +4,16 @@ import { format } from "date-fns";
 import { add } from "date-fns";
 import { isBefore } from "date-fns";
 import { isAfter } from "date-fns";
+import { changeFinishedByCheckBox } from "./finishTodo";
 
 const allBtn = document.querySelector('.all')
 const todayBtn = document.querySelector('.today')
 const importantBtn = document.querySelector('.important')
 const weekBtn = document.querySelector('.this-week')
 const overdueBtn = document.querySelector('.overdue')
+
+
+
 export function giveNavigationButtonsFunc(){
     console.log(allTodosArr, 'from naviButton')
       allBtn.addEventListener('click', displayAllByDates);
@@ -28,6 +32,7 @@ function displayAllByDates() {
     console.log(allTodosArr, 'posortowane allTodosArr', copy, 'copy posortowane');
     container.innerHTML =''
     copy.forEach(el => createTodoCard(el))
+    changeFinishedByCheckBox()
 }
 
 
@@ -39,12 +44,14 @@ function displayTodayTasks() {
     console.log(filtered)
     container.innerHTML =''
     filtered.forEach(el => createTodoCard(el))
+    changeFinishedByCheckBox()
 }
 
 function displayImportant(){
     const filtered = allTodosArr.filter(a => a.priority == 'high');
     container.innerHTML =''
     filtered.forEach(el => createTodoCard(el))
+    changeFinishedByCheckBox()
 }
 
 function displayWeek() {
@@ -53,18 +60,20 @@ function displayWeek() {
         if ((isBefore(new Date(a.dueDate), add(new Date(), {days: 8}))) && (isAfter(new Date(a.dueDate), add(new Date(), {days: -1})))) {
             filtered.push(a)
         }})
-    console.log(allTodosArr)
-    container.innerHTML =''
-    filtered.forEach(el => createTodoCard(el))
-}
-
+        console.log(allTodosArr)
+        container.innerHTML =''
+        filtered.forEach(el => createTodoCard(el))
+        changeFinishedByCheckBox()
+    }
+    
 function displayOverdue() {
     const filtered = []
     allTodosArr.filter(a => {
         if ((isBefore(new Date(a.dueDate), add(new Date(), {days: -1})))) {
             filtered.push(a)
         }})
-    container.innerHTML =''
-    filtered.forEach(el => createTodoCard(el))
+        container.innerHTML =''
+        filtered.forEach(el => createTodoCard(el))
+        changeFinishedByCheckBox()
     
 }

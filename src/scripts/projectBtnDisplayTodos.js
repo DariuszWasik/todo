@@ -12,8 +12,9 @@ export function projectsButtonDisplayingItsTodos() {
             const clickedProject = projectsArr.filter(a => a.name == el.outerText)
             clickedProject[0].todos.forEach(el =>{
               createTodoCard(el);
-              changeFinishedByCheckBox();
-            })
+            }
+        )
+        changeFinishedByCheckBox();
         })
     })
 }
