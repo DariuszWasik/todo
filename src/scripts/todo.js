@@ -29,6 +29,13 @@ class ToDo {
         console.log(projectsArr)
     }
 
+    removeTodo() {
+        console.log('im going to remove todo');
+        const index = allTodosArr.indexOf(this);
+        console.log(index)
+        allTodosArr.splice(index, 1)
+        console.log(allTodosArr, 'after removing todo')
+    }
 }
 
 let allTodosArr = []

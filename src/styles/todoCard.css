@@ -2,11 +2,16 @@
 
     margin: 0 3rem;
     padding: 1rem;
-    border: 1px white solid;
+    /* border: 1px white solid; */
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     height: fit-content;
     background-blend-mode: darken;
+}
+
+.todo-card:hover{
+    background-color: var(--asideAndHeader-backgroundColorAndOpacity);
 }
 
 .todo-upper-text {
@@ -20,5 +25,16 @@
 
 
 .todo-lower-text {
+    display: flex;
+    justify-content: space-between;
     font-size: 1rem;
+}
+
+.manipulation-buttons-todo {
+    display: flex;
+}
+
+.manipulation-buttons-todo *:hover{
+    cursor: pointer;
+    color: var(--text-color-pointed);
 }

@@ -45,7 +45,7 @@ html, body {
     grid-area: header;
     background: none;
     display: grid;
-    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-columns: var(--aside-width) 1fr 50px;
     /* justify-content: space-between; */
     padding: 0.3rem 1.5rem ;
     /* justify-content: space-between; */
@@ -73,7 +73,7 @@ html, body {
     align-items: center; */
     /* display: none; */
     display: grid;
-    grid-template-rows: 2rem 1fr 2fr 2rem;
+    grid-template-rows: 2rem 1fr 1rem 1fr 2rem;
     grid-row-gap: 2rem;
     padding: 1rem 1rem;
     text-align: center;
@@ -92,7 +92,10 @@ html, body {
   color: var(--text-color-pointed)
 }
 .projects-div{
-  margin-top: 1rem;
+  margin-top: -1.5rem;
+  height: 30vh;
+  margin-bottom: -2rem;
+  overflow-y: auto;
 }
 
 .main {
@@ -132,21 +135,25 @@ img path{
 /* width: 3ch; */
 
 /* the scrollbar styling */
+.projects-div,
 .display-projects {
   --sb-track-color: #454f71;
   --sb-thumb-color: #272130;
   --sb-size: 10px;
 }
 
+.projects-div::-webkit-scrollbar,
 .display-projects::-webkit-scrollbar {
   width: var(--sb-size)
 }
 
+.projects-div::-webkit-scrollbar-track,
 .display-projects::-webkit-scrollbar-track {
   background: var(--sb-track-color);
   border-radius: 3px;
 }
 
+.projects-div::-webkit-scrollbar-thumb,
 .display-projects::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
@@ -154,6 +161,7 @@ img path{
 }
 
 @supports not selector(::-webkit-scrollbar) {
+  .projects-div,
   .display-projects {
     scrollbar-color: var(--sb-thumb-color)
                      var(--sb-track-color);
@@ -179,7 +187,8 @@ img path{
   margin-left: 0.2rem;
   margin-top: 0.1rem;
 }
-
+.edit-todo,
+.trash-can-todo,
 .projectIcon,
 .bbb svg,
 .add-todo-div svg,
@@ -197,5 +206,5 @@ img path{
 .projects-title {
   text-align: end;
   margin-top: -1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }

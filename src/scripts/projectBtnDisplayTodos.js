@@ -1,6 +1,7 @@
 import { projectsArr } from "./project";
 import { createTodoCard, displayTodoCard, container } from "./DOM-todoCard";
-import { changeFinishedByCheckBox } from "./finishTodo";
+import { giveTodoCardButtonsFunctionality } from "./todoCardActions";
+
 
 export function projectsButtonDisplayingItsTodos() {
     const allProjects = document.querySelectorAll('.projectItem');
@@ -14,8 +15,8 @@ export function projectsButtonDisplayingItsTodos() {
               createTodoCard(el);
             }
         )
-        changeFinishedByCheckBox();
-        })
+        giveTodoCardButtonsFunctionality()    
+    })
     })
 }
 
