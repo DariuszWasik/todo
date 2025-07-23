@@ -14,6 +14,7 @@ export function createAddProjectModal() {
     nameLabel.textContent = 'name:'
     const nameInput = document.createElement('input');
     nameInput.className = 'nameInput';
+    nameInput.maxLength = '15'
     
     const nameDiv = document.createElement('div');
     nameDiv.className = 'nameDiv';

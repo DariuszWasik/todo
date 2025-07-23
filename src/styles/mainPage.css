@@ -163,6 +163,11 @@ img path{
 
 /* all icons  */
 
+/* .all-projects li {
+  background-color: red;
+} */
+
+.projectItem,
 .bbb,
 .add-todo-div,
 .add-project-div,
@@ -170,11 +175,12 @@ img path{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 0.8rem;
-  margin-left: 1rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
   margin-top: 0.1rem;
 }
 
+.projectIcon,
 .bbb svg,
 .add-todo-div svg,
 .add-project-div svg,
@@ -182,9 +188,14 @@ img path{
   width: 1.5rem;
 }
 
-
 .add-project-div,
 .add-todo-div {
   color: rgb(145, 95, 95);
   font-weight: bold;
+}
+
+.projects-title {
+  text-align: end;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
