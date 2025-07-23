@@ -35,7 +35,7 @@ html, body {
     /* height: 80vh;     */
     display: grid;
     /* grid-template: var(--header-height) 1fr / var(--aside-width) 1fr ; */
-    grid-template: 10vh 1fr / var(--aside-width) 1fr;
+    grid-template: var(--header-height) 1fr / var(--aside-width) 1fr;
     grid-template-areas: 
     "header header"
     "aside main";
@@ -96,13 +96,18 @@ html, body {
 }
 
 .main {
-  height: 90vh;
+  /* height: 90vh; */
+  height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
-    gap: 2rem;
+    margin-top: 1rem;
+    gap: 1rem;
     background: none;
     grid-area: main;
+}
+
+.main-header {
+  text-align: center;
 }
 
 .display-projects {
@@ -113,6 +118,7 @@ html, body {
   /* scrollbar-width: 1rem; */
   overflow-y: auto;
   overflow-x: hidden;
+  margin-bottom: 2rem;
 }
 
 .all-projects{

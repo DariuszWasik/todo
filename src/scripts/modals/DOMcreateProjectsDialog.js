@@ -1,7 +1,9 @@
 import './styles/addProjectModal.css'
+// import {projectsNamesArr}
+
 
 export function createAddProjectModal() {
-    console.log(projectsNamesArr)
+    // console.log(projectsNamesArr)
     const addProjectModal = document.querySelector('.add-project-dialog');
     
     const title = document.createElement('p');

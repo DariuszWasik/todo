@@ -2,7 +2,9 @@ import { ToDo } from "../todo";
 import { projectsArr } from "../project";
 import { allTodosArr } from "../todo";
 import { putAllTodosInAllTodosArray } from "../todo";
-   
+import { format } from "date-fns";
+
+
 export { cancelNewTodo, addNewTodo }
 
     const todoDialog = document.querySelector('.add-todo-dialog');
@@ -34,7 +36,7 @@ export { cancelNewTodo, addNewTodo }
             }
             else {
         const projectToGo = projectsArr.filter(a => a.name == selectInput.value);
-        const newTodo = new ToDo (nameInput.value, descInput.value, dateInput.value, priorityInput.value, projectToGo[0].id);
+        const newTodo = new ToDo (nameInput.value, descInput.value, format(new Date(dateInput.value), 'eee, dd MMM yyy'),priorityInput.value, projectToGo[0].id);
         console.log(newTodo)
         newTodo.assignToProject();
         putAllTodosInAllTodosArray()
