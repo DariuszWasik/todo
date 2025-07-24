@@ -1,17 +1,22 @@
 import { Project, projectsArr } from "./project";
-import { ToDo } from "./todo";
+import { putAllTodosInAllTodosArray, ToDo } from "./todo";
 import { displayProjects } from "./DOM-all-projects-container";
 import { addProject } from "./add-new-project-button";
-import { displayAllTodos } from "./DOM-todoCard";
+
 import { projectsButtonDisplayingItsTodos } from "./projectBtnDisplayTodos";
 import { addTask } from "./addToDoBtn";
 import { format } from "date-fns";
 import { add } from "date-fns";
 import { giveNavigationButtonsFunc } from "./navigationButtons";
+import { displayAllByDates } from "./navigationButtons";
+
+
 
 export function init () {
     console.log('siema')
 // console.log(projectsArr);
+
+
 const zadania = new Project('zadania', 'do wykonania niebawem');
 zadania.putProjectInProjectsArr();
 const zadania2 = new Project('zadania inne', 'do przemyslenia');
@@ -31,14 +36,17 @@ teleankieta.assignToProject();
 
 const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee, dd MMM yyy'), 'low', 0);
 rozliczPodatek.assignToProject();
- loadActions();
+ 
+
+loadActions();
 }
 
 function loadActions() {
+    putAllTodosInAllTodosArray()
     displayProjects();
     addProject();
     addTask();   
-    displayAllTodos();
     projectsButtonDisplayingItsTodos();
     giveNavigationButtonsFunc();
+    displayAllByDates()
 }

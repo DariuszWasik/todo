@@ -24,23 +24,18 @@ function giveNavigationButtonsFunc(){
       allBtn.addEventListener('click', () => {
         displayAllByDates();
         console.log(allBtn.textContent.trim())
-        mainHeader.textContent = allBtn.textContent.trim()
     });
     todayBtn.addEventListener('click', () => {
         displayTodayTasks();
-        mainHeader.textContent = todayBtn.textContent.trim()
     });
     importantBtn.addEventListener('click', () => {
         displayImportant();
-        mainHeader.textContent = importantBtn.textContent.trim();
     });
     weekBtn.addEventListener('click', () => {
         displayWeek();
-        mainHeader.textContent = weekBtn.textContent.trim();
     })
     overdueBtn.addEventListener('click', () => {
         displayOverdue();
-        mainHeader.textContent = overdueBtn.textContent.trim()
     })
 }
 
@@ -54,6 +49,7 @@ function displayAllByDates() {
     container.innerHTML =''
     copy.forEach(el => createTodoCard(el))
     giveTodoCardButtonsFunctionality()
+    mainHeader.textContent = allBtn.textContent.trim()
 }
 
 
@@ -66,6 +62,7 @@ function displayTodayTasks() {
     container.innerHTML =''
     filtered.forEach(el => createTodoCard(el))
     giveTodoCardButtonsFunctionality()
+    mainHeader.textContent = todayBtn.textContent.trim()
 }
 
 
@@ -74,6 +71,7 @@ function displayImportant(){
     container.innerHTML =''
     filtered.forEach(el => createTodoCard(el))
     giveTodoCardButtonsFunctionality();
+    mainHeader.textContent = importantBtn.textContent.trim();
 }
 
 function displayWeek() {
@@ -86,6 +84,7 @@ function displayWeek() {
         container.innerHTML =''
         filtered.forEach(el => createTodoCard(el))
         giveTodoCardButtonsFunctionality();
+        mainHeader.textContent = weekBtn.textContent.trim();
     }
     
 function displayOverdue() {
@@ -97,4 +96,5 @@ function displayOverdue() {
         container.innerHTML =''
         filtered.forEach(el => createTodoCard(el))
         giveTodoCardButtonsFunctionality()
-}
+        mainHeader.textContent = overdueBtn.textContent.trim()
+    }
