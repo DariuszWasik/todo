@@ -5,10 +5,10 @@ import { displayProjectsTodos } from "./projectBtnDisplayTodos";
 
 
 
-const header = document.querySelector('.main-header')
 
 
 export function render() {
+    const header = document.querySelector('.main-header')
     console.log(projectsArr)
     if(projectsNamesArr.includes(header.textContent.trim())){
         console.log('yesYYYYYYYYYYYYYYYYYYYYYYYYYYY')

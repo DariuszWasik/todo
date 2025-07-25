@@ -1,5 +1,6 @@
 import './styles/addTodoModal.css'
 import { projectsNamesArr } from '../DOM-all-projects-container';
+import { format, add } from 'date-fns';
 
 export function createAddTodoModal() {
     const todoDialog = document.querySelector('.add-todo-dialog');
@@ -29,6 +30,8 @@ export function createAddTodoModal() {
     dateInput.className = 'dateInput';
     dateInput.name = 'dateInput';
     dateInput.type = 'date'
+    dateInput.value =  format(add(new Date(), {days: 3}), 'yyyy-MM-dd');
+
 
     dateDiv.append(dateLabel, dateInput)
 
