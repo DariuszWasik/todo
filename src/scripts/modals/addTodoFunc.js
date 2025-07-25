@@ -3,7 +3,7 @@ import { projectsArr } from "../project";
 import { allTodosArr } from "../todo";
 import { putAllTodosInAllTodosArray } from "../todo";
 import { format } from "date-fns";
-
+import { render } from "../render";
 
 export { cancelNewTodo, addNewTodo }
 
@@ -42,5 +42,7 @@ export { cancelNewTodo, addNewTodo }
         putAllTodosInAllTodosArray()
         console.log(allTodosArr, 'alltodosarr after add task button')        
         closeTodoDialog();
+        render();
+        
         }})
     }

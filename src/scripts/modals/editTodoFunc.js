@@ -1,9 +1,6 @@
-import { ToDo } from "../todo";
-import { projectsArr } from "../project";
 import { allTodosArr } from "../todo";
-import { putAllTodosInAllTodosArray } from "../todo";
 import { format } from "date-fns";
-import { renderAfterRemoving } from "../removeTodo";
+import { render } from "../render";
 
 export { cancelEditTodo, editTodo }
 
@@ -44,7 +41,7 @@ export { cancelEditTodo, editTodo }
                 todoToBeEdit.priority = priorityInput.value;
                 console.log(allTodosArr)
                 closeEditTodoDialog();
-                renderAfterRemoving();
+                render();
         }})
 
 

@@ -32,6 +32,7 @@
 
 .manipulation-buttons-todo {
     display: flex;
+    gap: 1.5rem;
 }
 
 .manipulation-buttons-todo *:hover{

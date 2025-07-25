@@ -1,8 +1,4 @@
 import { allTodosArr } from "./todo";
-import {displayAllByDates, displayTodayTasks, displayImportant, displayWeek, displayOverdue} from './navigationButtons'
-import { projectsArr } from "./project";
-import { projectsNamesArr } from "./DOM-all-projects-container";
-import { displayProjectsTodos } from "./projectBtnDisplayTodos";
 import { createEditTodoModal } from "./modals/DOMcreateEditTodoDialog";
 import { cancelEditTodo, editTodo } from "./modals/editTodoFunc";
 
