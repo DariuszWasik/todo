@@ -35,6 +35,3 @@ function displayProjectsTodos(project){
     giveTodoCardButtonsFunctionality() 
 }
 
-function renderTodosActualInProjects(ID) {
-    allTodosArr.filter
-}

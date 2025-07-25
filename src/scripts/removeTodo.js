@@ -6,7 +6,10 @@ import { displayProjectsTodos } from "./projectBtnDisplayTodos";
 
 const header = document.querySelector('.main-header')
 
-export function removeTodoFunc() {
+export {removeTodoFunc, renderAfterRemoving}
+
+
+function removeTodoFunc() {
 const removeTodoBtn = document.querySelectorAll('.trash-can-todo');
 removeTodoBtn.forEach(trash => { 
     trash.addEventListener('click', ()=>{

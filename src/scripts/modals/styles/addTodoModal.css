@@ -1,12 +1,14 @@
 
 
 
+.edit-todo-dialog:not([open]),
 .add-todo-dialog:not([open]){
     display: none;
 }
 
 
 
+.edit-todo-dialog,
 .add-todo-dialog{
     border: none;
     border-radius: 2rem;
@@ -17,6 +19,7 @@
     background-color: var(--backgroundColorModal);
 }
 
+.edit-todo-dialog::backdrop,
 .add-todo-dialog::backdrop{
     backdrop-filter: blur(2px);
 }
