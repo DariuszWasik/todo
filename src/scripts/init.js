@@ -9,7 +9,7 @@ import { format } from "date-fns";
 import { add } from "date-fns";
 import { giveNavigationButtonsFunc } from "./navigationButtons";
 import { displayAllByDates } from "./navigationButtons";
-
+import { changeMode } from "./lightDarkMode";
 
 
 export function init () {
@@ -49,4 +49,5 @@ function loadActions() {
     projectsButtonDisplayingItsTodos();
     giveNavigationButtonsFunc();
     displayAllByDates()
+    changeMode()
 }

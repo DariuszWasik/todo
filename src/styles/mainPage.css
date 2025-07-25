@@ -45,7 +45,7 @@ html, body {
     grid-area: header;
     background: none;
     display: grid;
-    grid-template-columns: var(--aside-width) 1fr 50px;
+    grid-template-columns: var(--aside-width) 1fr 50px 50px;
     /* justify-content: space-between; */
     padding: 0.3rem 1.5rem ;
     /* justify-content: space-between; */
@@ -61,7 +61,9 @@ html, body {
     display : flex;
     gap: 3rem;
 }
-
+.mode:hover {
+  cursor: pointer;
+}
 .aside {
   height: 90vh;
     /* background: none; */
@@ -199,7 +201,7 @@ img path{
 
 .add-project-div,
 .add-todo-div {
-  color: rgb(145, 95, 95);
+  color: rgb(143, 68, 68);
   font-weight: bold;
 }
 
