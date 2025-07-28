@@ -1,0 +1,39 @@
+@media(width < 600px){
+ 
+    .aside {
+        display: none;
+    }
+
+
+    .content {
+         grid-template-rows: var(--header-height) 1fr;
+         grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    " main" ;
+    }
+
+    .header {
+        grid-template-columns: 70px 1fr 40px 40px;
+        padding: 0 0.5rem;
+    }
+    
+    .display-projects{
+        width: 100vw;
+        justify-items: stretch;
+    }
+
+    .todo-card{
+        margin: 0 0.8rem !important
+    }
+  
+    .hamburger svg{
+        display: flex;
+    }
+
+    .hamburger svg:hover {
+        cursor: pointer;
+        color: var(--text-color-pointed);
+    }
+
+}

@@ -2,12 +2,13 @@
 
     margin: 0 3rem;
     padding: 1rem;
-    /* border: 1px white solid; */
+    border: 1px white solid;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     height: fit-content;
     background-blend-mode: darken;
+    justify-self: stretch;
 }
 
 .todo-card:hover{
@@ -19,7 +20,7 @@
     grid-template-columns: 1rem 1fr 5ch 15ch;
     gap: 1rem;
     justify-content: space-between;
-    font-size: 2ren;
+    /* font-size: 2ren; */
 }
 
 
@@ -38,4 +39,8 @@
 .manipulation-buttons-todo *:hover{
     cursor: pointer;
     color: var(--text-color-pointed);
+}
+
+.todo-date {
+    text-align: end;
 }

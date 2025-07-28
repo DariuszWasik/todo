@@ -24,6 +24,7 @@ html, body {
     max-width: 100vh;
     background-color: var(--background-color);
     background-image: var(--background-image);
+    transition: background-color 0.4s;
 }
 
 .content {
@@ -209,4 +210,12 @@ img path{
   text-align: end;
   margin-top: -1rem;
   /* margin-bottom: 1rem; */
+}
+
+.hamburger {
+  width: max-content;
+}
+
+.hamburger svg {
+  display: none;
 }
