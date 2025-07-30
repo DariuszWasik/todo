@@ -1,4 +1,4 @@
-@media(width < 600px){
+@media(width < 758px){
  
     .aside {
         opacity: 0;
@@ -36,4 +36,15 @@
         color: var(--text-color-pointed);
     }
 
+}
+
+@media (width > 758px){
+    .main{
+        /* color: aqua; */
+        grid-column: 2 / 3 !important;
+        z-index: 1;
+    }
+    .aside{
+        opacity: 1 !important
+    }
 }

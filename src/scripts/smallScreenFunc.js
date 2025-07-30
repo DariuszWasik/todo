@@ -58,8 +58,10 @@ export function smallScreenFunc() {
         // hamburgerSVG.addEventListener('click', () =>{
         //     aside.style.opacity = '0'
         // } )
-        aside.addEventListener('click', () =>
-        aside.style.opacity = '0')
+        aside.addEventListener('click', () => {
+        aside.style.opacity = '0'
+        main.style.zIndex = '1'} )
+
         if (window.innerWidth > 758){   
                 console.log('window widhe greater than 758')
     aside.style.opacity = '1'
