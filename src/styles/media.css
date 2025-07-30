@@ -1,16 +1,16 @@
 @media(width < 600px){
  
     .aside {
-        display: none;
+        opacity: 0;
     }
 
 
     .content {
          grid-template-rows: var(--header-height) 1fr;
-         grid-template-columns: 1fr;
+         grid-template-columns: 1px 1fr;
     grid-template-areas: 
-    "header"
-    " main" ;
+    "header header" 
+    "aside main" ;
     }
 
     .header {

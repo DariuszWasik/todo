@@ -10,7 +10,7 @@ import { add } from "date-fns";
 import { giveNavigationButtonsFunc } from "./navigationButtons";
 import { displayAllByDates } from "./navigationButtons";
 import { changeMode } from "./lightDarkMode";
-
+import { smallScreenFunc } from "./smallScreenFunc";
 
 export function init () {
     console.log('siema')
@@ -41,7 +41,7 @@ rozliczPodatek.assignToProject();
 loadActions();
 }
 
-function loadActions() {
+export function loadActions() {
     putAllTodosInAllTodosArray()
     displayProjects();
     addProject();
@@ -50,4 +50,5 @@ function loadActions() {
     giveNavigationButtonsFunc();
     displayAllByDates()
     changeMode()
+    smallScreenFunc()
 }
