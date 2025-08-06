@@ -114,6 +114,17 @@ html, body {
 
 .main-header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header-lower {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  margin-right: 3rem;
+  font-size: 1rem;
+  color: var(--add-todo-add-project-text-color);
 }
 
 .display-projects {
@@ -190,6 +201,9 @@ img path{
   margin-left: 0.2rem;
   margin-top: 0.1rem;
 }
+
+
+.delete-project,
 .edit-todo,
 .trash-can-todo,
 .projectIcon,
