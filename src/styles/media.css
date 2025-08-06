@@ -43,8 +43,10 @@
         /* color: aqua; */
         grid-column: 2 / 3 !important;
         z-index: 1;
+        filter: none !important;
     }
     .aside{
-        opacity: 1 !important
+        opacity: 1 !important;
+        background-color: transparent !important
     }
 }

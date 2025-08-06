@@ -33,11 +33,13 @@ function changeVariables(){
     const r = document.querySelector(':root');
     r.style.setProperty('--background-color', "#ecdcdc")
     r.style.setProperty('--text-color', '#271539')
+    r.style.setProperty('--asideAndHeader-backgroundColorAndOpacity', '#rgb(237, 233, 240)')
 }
 
 function unchangeVariables(){
     const r = document.querySelector(':root');
     r.style.setProperty('--background-color', "#54585f")
     r.style.setProperty('--text-color', '#bab6be')
+    r.style.setProperty('--asideAndHeader-backgroundColorAndOpacity', '#rgb(75, 79, 79)')
 
 }

@@ -35,6 +35,9 @@ const main = document.querySelector('main');
 function toggleAsideOpacity() {
 aside.style.opacity = aside.style.opacity == "1" ? "0" : "1"
 }
+function toggleBlur(){
+main.style.filter = main.style.filter == 'blur(2px)' ? 'none' : 'blur(2px)'
+}
 
 export function smallScreenFunc() {
     console.log('imported')
@@ -44,9 +47,9 @@ export function smallScreenFunc() {
             // aside.style.display ='grid'
             aside.style.transition = '0.8s ease'
             toggleAsideOpacity()
-            aside.style.backgroundColor = 'var(--aside-background-color-hamburger)'
-
-    //     aside.style.display = 'grid';
+            const r = document.querySelector(':root');
+            r.style.setProperty('--opacityBGC', "0.8")
+            aside.style.backgroundColor = 'var(--background-color)';  
         const content = document.querySelector('.content');
         
         content.style.gridTemplateRows='var(--header-height) 1fr';
@@ -54,20 +57,25 @@ export function smallScreenFunc() {
 
         main.style.gridColumn = '1 / 3'
         main.style.zIndex = '-1';
+        toggleBlur();
+        
         
         // hamburgerSVG.addEventListener('click', () =>{
         //     aside.style.opacity = '0'
         // } )
         aside.addEventListener('click', () => {
         aside.style.opacity = '0'
-        main.style.zIndex = '1'} )
+        // aside.style.backgroundColor = 'inherit'
+        main.style.zIndex = '1'
+        main.style.filter = 'none'
+    } )
 
-        if (window.innerWidth > 758){   
-                console.log('window widhe greater than 758')
-    aside.style.opacity = '1'
-    main.style.gridColumn = '2 / 3'
-    main.style.zIndex = '0'
-        }
+    //     if (window.innerWidth > 758){   
+    //             console.log('window widhe greater than 758')
+    // aside.style.opacity = '1'
+    // main.style.gridColumn = '2 / 3'
+    // main.style.zIndex = '0'
+    //     }
     })
 }
 
