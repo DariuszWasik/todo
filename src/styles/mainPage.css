@@ -83,6 +83,11 @@ html, body {
     border-top-right-radius: -2rem;
 }
 
+.delete-project:hover {
+  cursor: pointer;
+  color: var(--text-color-pointed)
+
+}
 .add-todo-div:hover,
 .projects-div .all-projects li:hover,
 .navigation-div div:hover,
@@ -122,6 +127,7 @@ html, body {
   display: flex;
   gap: 1rem;
   justify-content: end;
+  align-items: center;
   margin-right: 3rem;
   font-size: 1rem;
   color: var(--add-todo-add-project-text-color);
@@ -203,7 +209,10 @@ img path{
 }
 
 
-.delete-project,
+.delete-project{
+  width: 2rem;
+}
+
 .edit-todo,
 .trash-can-todo,
 .projectIcon,
