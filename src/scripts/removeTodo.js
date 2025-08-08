@@ -14,13 +14,14 @@ removeTodoBtn.forEach(trash => {
 console.log(allTodosArr, 'z removeTodoFunc')
 console.log(trash.name, 'trashname')
 const clickedTrash = allTodosArr.filter(a => a.todoID == trash.name);
-console.log(clickedTrash)
+console.log(clickedTrash[0], 'clickedtrash')
 const todoToRemove = clickedTrash[0];
 console.log(clickedTrash[0].projectID, 'trashProjectID')
 todoToRemove.removeTodo();
 console.log(header.textContent)
 updatingProjectsTodosAfterRemovingTodo(clickedTrash[0].projectID)
 render();
+console.log('zrenderowalem')
 }
 )
 })}
@@ -30,6 +31,11 @@ render();
 function updatingProjectsTodosAfterRemovingTodo(ID) {
  const updatedTodosArr =  allTodosArr.filter(a => a.projectID == ID);
  console.log (updatedTodosArr, 'updatedTodosArr')
- projectsArr[ID].todos = updatedTodosArr;
-console.log(projectsArr[ID].todos, 'todosy tego projectu')
+ const projectThatTodosShouldBeUpdated = projectsArr.filter(project => project.id == ID)
+ console.log(projectThatTodosShouldBeUpdated, 'projectThatTodosShuoldBeUpdater')
+ projectThatTodosShouldBeUpdated[0].todos = updatedTodosArr;
+ console.log(projectsArr, 'projectsArr after removing todo')   
+
+//  projectsArr[ID].todos = updatedTodosArr;
+// console.log(projectsArr[ID].todos, 'todosy tego projectu')
 }

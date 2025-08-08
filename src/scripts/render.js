@@ -9,10 +9,13 @@ import { displayProjectsTodos } from "./projectBtnDisplayTodos";
 
 export function render() {
     const header = document.querySelector('.main-header')
-    console.log(projectsArr)
-    if(projectsNamesArr.includes(header.textContent.trim())){
+    const mainHeaderUpper = document.querySelector('.main-header-upper')
+    console.log(projectsArr,'z funcji render')
+    console.log(mainHeaderUpper)
+    // console.log(projectsNamesArr.includes(header.textContent.trim()))
+    if(mainHeaderUpper !== null && projectsNamesArr.includes(mainHeaderUpper.textContent.trim())){
         console.log('yesYYYYYYYYYYYYYYYYYYYYYYYYYYY')
-        const id = projectsNamesArr.indexOf(header.textContent.trim())
+        const id = projectsNamesArr.indexOf(mainHeaderUpper.textContent.trim())
         console.log(id, 'its id nr in arr')
         console.log(projectsArr[id], 'project with this id');
         displayProjectsTodos(projectsArr[id])

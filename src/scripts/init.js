@@ -12,6 +12,7 @@ import { displayAllByDates } from "./navigationButtons";
 import { changeMode } from "./lightDarkMode";
 import { smallScreenFunc } from "./smallScreenFunc";
 
+
 export function init () {
     console.log('siema')
 // console.log(projectsArr);
@@ -26,15 +27,15 @@ telefony.putProjectInProjectsArr();
 console.log(zadania, telefony);
 console.log(projectsArr);
 
-const zadzwonDoLekarza = new ToDo('zadzown do lekarz', 'zapytaj o recepte Ani', format(add(new Date(), {days: -3}), 'eee, dd MMM yyy'), 'high', 2);
+const zadzwonDoLekarza = new ToDo('zadzown do lekarz', 'zapytaj o recepte Ani', format(add(new Date(), {days: -3}), 'eee, dd MMM yyy'), 'high', projectsArr[2].id);
 console.log(zadzwonDoLekarza)
 zadzwonDoLekarza.assignToProject();
 
-const teleankieta = new ToDo('zadzown energetyki', 'wez udzial w ankiecie', format(new Date(), 'eee, dd MMM yyy'), 'high', 2);
+const teleankieta = new ToDo('zadzown energetyki', 'wez udzial w ankiecie', format(new Date(), 'eee, dd MMM yyy'), 'high', projectsArr[2].id);
 console.log(teleankieta);
 teleankieta.assignToProject();
 
-const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee, dd MMM yyy'), 'low', 0);
+const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee, dd MMM yyy'), 'low', projectsArr[0].id);
 rozliczPodatek.assignToProject();
  
 
