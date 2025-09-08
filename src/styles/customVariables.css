@@ -17,8 +17,8 @@
     --buttonWidthModal: 5rem;
     --backgroundColorModal: rgb(146, 125, 156);
     --areasColorModal: rgba(182, 177, 186, 0.904);
-    --asideAndHeader-backgroundColorAndOpacity: rgb(80, 100, 100);
-    --hoverAsideAndHeader-backgroundColorAndOpacity: rgb(75, 79, 79, .7);
+    --asideAndHeader-backgroundColorAndOpacity: rgb(75, 79, 79);
+    --hoverAsideAndHeader-backgroundColorAndOpacity: rgb(75, 79, 79);
     --aside-background-color-hamburger: rgb(75, 79, 79);
     --light-background-color: #ecdcdc;
     --light-text-color: #271539;
