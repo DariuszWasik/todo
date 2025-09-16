@@ -1,4 +1,6 @@
-.todo-card{
+.todo-card,
+.plusDiv
+{
 
     margin: 0 3rem;
     padding: 1rem;
@@ -11,7 +13,8 @@
     justify-self: stretch;
 }
 
-.todo-card:hover{
+.todo-card:hover,
+.plusDiv:hover{
     background-color: var(--asideAndHeader-backgroundColorAndOpacity);
 }
 
@@ -43,4 +46,18 @@
 
 .todo-date {
     text-align: end;
+}
+
+.plusDiv {
+    justify-self: end;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 5rem;
+    color: var(--text-color);
+    text-align: center;
+    padding: 0;
+}
+
+.finished {
+    cursor: pointer;
 }

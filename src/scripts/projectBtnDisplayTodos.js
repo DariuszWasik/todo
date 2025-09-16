@@ -3,6 +3,7 @@ import { createTodoCard, displayTodoCard, container } from "./DOM-todoCard";
 import { giveTodoCardButtonsFunctionality } from "./todoCardActions";
 import { allTodosArr } from "./todo";
 import { deleteProjectFunc } from "./deleteProject";
+import { addAddTodoBtnInProjectContainer } from "./addaddTodoBtnInProjectContainer";
 
 
 export { projectsButtonDisplayingItsTodos, displayProjectsTodos}
@@ -50,6 +51,8 @@ function displayProjectsTodos(project){
     project.todos.forEach(el =>
         createTodoCard(el)
     )
-    giveTodoCardButtonsFunctionality() 
+    giveTodoCardButtonsFunctionality();
+    console.log(project.name, '- z funkcji displayProjectsTodos')
+    addAddTodoBtnInProjectContainer()
 }
 

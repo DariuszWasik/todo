@@ -9,14 +9,15 @@ import { addButtonsInDeleteProjectDialogFunctionality } from "./modals/deletePro
 export function deleteProjectFunc() {
 const deleteProjectBtn = document.querySelector('.delete-project');
 deleteProjectBtn.addEventListener('click', () => {
-const deleteProjectDialog = document.querySelector('.delete-project-dialog');
-deleteProjectDialog.showModal()
-createDeleteProjectModal()
-addButtonsInDeleteProjectDialogFunctionality()
+    const deleteProjectDialog = document.querySelector('.delete-project-dialog');
+    deleteProjectDialog.showModal()
+    createDeleteProjectModal()
+    addButtonsInDeleteProjectDialogFunctionality()
 }
 )
 }
 // {
+// const deleteProjectBtn = document.querySelector('.delete-project');
 // console.log('click delete id nr', deleteProjectBtn.name)
 // const thisProject = projectsArr.filter(a => a.name == deleteProjectBtn.name)
 // const numberInProjectsArr = projectsArr.indexOf(thisProject[0]);
