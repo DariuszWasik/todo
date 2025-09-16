@@ -53,6 +53,6 @@ function displayProjectsTodos(project){
     )
     giveTodoCardButtonsFunctionality();
     console.log(project.name, '- z funkcji displayProjectsTodos')
-    addAddTodoBtnInProjectContainer()
+    addAddTodoBtnInProjectContainer(project)
 }
 

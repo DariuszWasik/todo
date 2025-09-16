@@ -6,13 +6,13 @@ export function createAddTodoModal() {
     const todoDialog = document.querySelector('.add-todo-dialog');
 
     const header = document.createElement('p');
-    header.className = 'header';
-    header.innerText = 'Add Task'
+    header.className = 'header-in-modal';
+    header.innerText = 'Add ToDo'
 
     
     const nameInput = document.createElement('input');
     nameInput.className = 'nameInput'
-    nameInput.placeholder = 'Task name:'
+    nameInput.placeholder = 'ToDo name:'
 
     const descInput = document.createElement('textarea');
     descInput.className = 'descInput';
@@ -76,7 +76,7 @@ export function createAddTodoModal() {
 
     const addBtn = document.createElement('button');
     addBtn.className = 'addBtn';
-    addBtn.innerText = 'Add Task'
+    addBtn.innerText = 'Add ToDo'
     const cancelBtn = document.createElement('button');
     cancelBtn.className = 'cancelBtn';
     cancelBtn.innerText = 'Cancel'

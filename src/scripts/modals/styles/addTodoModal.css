@@ -17,6 +17,7 @@
     flex-direction: column;
     gap: 1rem;
     background-color: var(--backgroundColorModal);
+    text-align: center  ;
 }
 
 .edit-todo-dialog::backdrop,
@@ -64,5 +65,11 @@
 
 .addBtn,
 .cancelBtn {
+    width: 7rem;
     align-self: center;
+}
+
+
+.header-in-modal {
+    font-weight: bold;
 }
