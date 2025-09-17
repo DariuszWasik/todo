@@ -2,6 +2,7 @@ import {displayAllByDates, displayTodayTasks, displayImportant, displayWeek, dis
 import { projectsArr } from "./project";
 import { projectsNamesArr } from "./DOM-all-projects-container";
 import { displayProjectsTodos } from "./projectBtnDisplayTodos";
+import { updateLocalStorage } from './localStorage';
 
 
 
@@ -39,4 +40,5 @@ export function render() {
             break;
     }
 }
+updateLocalStorage()
 }

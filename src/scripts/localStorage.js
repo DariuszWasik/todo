@@ -3,12 +3,24 @@ import { allTodosArr, putAllTodosInAllTodosArray } from "./todo";
 import { ToDo } from "./todo";
 import { initialJSON } from "./intialJSON";
 
-export function localStorage() {
+export {initData, createLocalStorage, checkForLocalStorageAtTheBeginning, updateLocalStorage}
+
+
+
+function checkForLocalStorageAtTheBeginning() {
+
+if(localStorage.local) 
+    initData(localStorage.local)
+else initData(initialJSON) 
+}
+
+
+function initData(string) {
     console.log(projectsArr, 'projects')
     console.log(allTodosArr, 'todos')
     // console.log(JSON.stringify(projectsArr))
     // const projectsArrJSON = JSON.stringify(projectsArr)
-    const copy = JSON.parse(initialJSON);
+    const copy = JSON.parse(string);
     console.log(copy, 'copy')
     // console.log(typeof(copy))
     // console.log(typeof(projectsArr))
@@ -43,4 +55,15 @@ export function localStorage() {
     // console.log(allTodosArr == copyAllTodosArr)
     
 
+}
+
+function createLocalStorage() {
+    localStorage.setItem('local', JSON.stringify(projectsArr))
+    if(localStorage.local) {console.log('yes')}
+    else {console.log('no')}
+}
+
+function updateLocalStorage(){
+    console.log(projectsArr)
+    localStorage.setItem('local', JSON.stringify(projectsArr))
 }

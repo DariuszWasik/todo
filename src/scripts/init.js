@@ -12,7 +12,7 @@ import { displayAllByDates } from "./navigationButtons";
 import { changeMode } from "./lightDarkMode";
 import { smallScreenFunc } from "./smallScreenFunc";
 
-import { localStorage } from "./localStorage";
+import { initData, createLocalStorage, checkForLocalStorageAtTheBeginning, updateLocalStorage } from "./localStorage";
 
 
 export function init () {
@@ -40,19 +40,18 @@ export function init () {
 // const rozliczPodatek = new ToDo('rozlicz podatek', 'sprobuj uzyskac ulge na dzieci',format(add(new Date(), {days: 6}), 'eee, dd MMM yyy'), 'low', projectsArr[0].id);
 // rozliczPodatek.assignToProject();
  
+// putAllTodosInAllTodosArray()
+checkForLocalStorageAtTheBeginning();
+updateLocalStorage()
 
-loadActions();
+displayProjects();
+addProject();
+addTask();   
+projectsButtonDisplayingItsTodos();
+giveNavigationButtonsFunc();
+displayAllByDates()
+changeMode()
+smallScreenFunc()
+
 }
 
-export function loadActions() {
-    // putAllTodosInAllTodosArray()
-    localStorage()
-    displayProjects();
-    addProject();
-    addTask();   
-    projectsButtonDisplayingItsTodos();
-    giveNavigationButtonsFunc();
-    displayAllByDates()
-    changeMode()
-    smallScreenFunc()
-}
