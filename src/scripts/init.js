@@ -12,6 +12,8 @@ import { displayAllByDates } from "./navigationButtons";
 import { changeMode } from "./lightDarkMode";
 import { smallScreenFunc } from "./smallScreenFunc";
 
+import { localStorage } from "./localStorage";
+
 
 export function init () {
     console.log('siema')
@@ -52,4 +54,5 @@ export function loadActions() {
     displayAllByDates()
     changeMode()
     smallScreenFunc()
+    localStorage()
 }

@@ -31,7 +31,7 @@ function toggleMode() {
 
 function changeVariables(){
     const r = document.querySelector(':root');
-    r.style.setProperty('--background-color', "#ecdcdc")
+    r.style.setProperty('--background-color', "#b5b19897")
     r.style.setProperty('--text-color', '#271539')
     r.style.setProperty('--asideAndHeader-backgroundColorAndOpacity', 'rgb(75, 79, 79, .2)')
     r.style.setProperty('--hoverAsideAndHeader-backgroundColorAndOpacity', 'rgb(75, 79, 79, .2)')
@@ -40,7 +40,7 @@ function changeVariables(){
 
 function unchangeVariables(){
     const r = document.querySelector(':root');
-    r.style.setProperty('--background-color', "#54585f")
+    r.style.setProperty('--background-color', "#1f2124")
     r.style.setProperty('--text-color', '#bab6be')
     r.style.setProperty('--asideAndHeader-backgroundColorAndOpacity', 'rgb(75, 79, 79)')
     r.style.setProperty('--hoverAsideAndHeader-backgroundColorAndOpacity', 'rgb(75, 79, 79)')
