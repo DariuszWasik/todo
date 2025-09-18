@@ -47,6 +47,7 @@ export function smallScreenFunc() {
             // aside.style.display ='grid'
             aside.style.transition = '0.8s ease'
             toggleAsideOpacity()
+            aside.style.display = 'grid'
             const r = document.querySelector(':root');
             r.style.setProperty('--opacityBGC', "0.8")
             aside.style.backgroundColor = 'var(--background-color)';  
