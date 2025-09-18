@@ -3,16 +3,17 @@ export {ToDo, allTodosArr, putAllTodosInAllTodosArray}
 
 
 class ToDo {
-    constructor (name, description, dueDate, priority, projectID){
+    constructor (name, description, dueDate, priority, projectID, finished){
         this.name = name;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
         this.projectID = projectID
+        this.finished = finished
     }
     
     todoID = crypto.randomUUID()
-    finished = false;  
+    // finished = false;  
     
     changeFinish(){
         this.finished = !this.finished

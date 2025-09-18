@@ -3,7 +3,7 @@ import { allTodosArr, putAllTodosInAllTodosArray } from "./todo";
 import { ToDo } from "./todo";
 import { initialJSON } from "./intialJSON";
 
-export {initData, createLocalStorage, checkForLocalStorageAtTheBeginning, updateLocalStorage}
+export {initData, checkForLocalStorageAtTheBeginning, updateLocalStorage}
 
 
 
@@ -35,7 +35,7 @@ function initData(string) {
         const project =  new Project(element.name, element.description);
         project.id = element.id;
         element.todos.forEach( td => {
-            const todo = new ToDo(td.name, td.description, td.dueDate, td.priority, td.projectID)
+            const todo = new ToDo(td.name, td.description, td.dueDate, td.priority, td.projectID, td.finished)
             todo.todoID = td.todoID;
             console.log(todo, 'todo')
             project.todos.push(todo)
@@ -57,13 +57,8 @@ function initData(string) {
 
 }
 
-function createLocalStorage() {
-    localStorage.setItem('local', JSON.stringify(projectsArr))
-    if(localStorage.local) {console.log('yes')}
-    else {console.log('no')}
-}
-
 function updateLocalStorage(){
     console.log(projectsArr)
     localStorage.setItem('local', JSON.stringify(projectsArr))
+    console.log(localStorage.getItem('local'))
 }
