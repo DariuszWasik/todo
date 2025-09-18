@@ -61,3 +61,7 @@
 .finished {
     cursor: pointer;
 }
+
+input:checked +p {
+ text-decoration: line-through;
+}
