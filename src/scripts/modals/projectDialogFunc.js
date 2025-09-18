@@ -1,6 +1,8 @@
 import { Project, projectsArr } from "../project";
 import { displayProjects } from "../DOM-all-projects-container";
 import { projectsButtonDisplayingItsTodos } from "../projectBtnDisplayTodos";
+import { updateLocalStorage } from "../localStorage";
+import { render } from "../render";
 export {cancelNewProject, addNewProject} 
 
 const addProjectDialog = document.querySelector('.add-project-dialog')
@@ -27,7 +29,9 @@ function addNewProject() {
         projectsArr.push(newProject);
         displayProjects();
         projectsButtonDisplayingItsTodos();
-        closeDialog()        
+        closeDialog()
+        render()
+        // updateLocalStorage()
 }
 )
 

@@ -3,6 +3,7 @@ import { displayProjects } from "../DOM-all-projects-container";
 import { putAllTodosInAllTodosArray } from "../todo";
 import { projectsButtonDisplayingItsTodos } from "../projectBtnDisplayTodos";
 import { displayAllByDates } from "../navigationButtons";
+import { render } from "../render";
 
 
 function closeDeleteProjectModal() {
@@ -28,6 +29,7 @@ projectsButtonDisplayingItsTodos()
 putAllTodosInAllTodosArray()
 displayAllByDates()
 closeDeleteProjectModal()
+render()
 }
 
 
