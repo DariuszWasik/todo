@@ -4,7 +4,7 @@ import { cancelNewTodo, addNewTodo } from "./modals/addTodoFunc";
 
 
 export function addTask () {
-    const addTodoButton = document.querySelector('.add-todo');
+    const addTodoButton = document.querySelector('.add-todo-div');
     const addTodoModal = document.querySelector('.add-todo-dialog')
     addTodoButton.addEventListener('click', () => {
         addTodoModal.showModal();
