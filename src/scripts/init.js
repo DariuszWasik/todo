@@ -13,6 +13,7 @@ import { changeMode } from "./lightDarkMode";
 import { smallScreenFunc } from "./smallScreenFunc";
 
 import { initData, createLocalStorage, checkForLocalStorageAtTheBeginning, updateLocalStorage } from "./localStorage";
+import { info } from "./info";
 
 
 export function init () {
@@ -51,6 +52,7 @@ projectsButtonDisplayingItsTodos();
 giveNavigationButtonsFunc();
 displayAllByDates()
 changeMode()
+info()
 smallScreenFunc()
 
 }
