@@ -68,7 +68,7 @@ html, body {
   cursor: pointer;
 }
 .aside {
-  height: calc(100vh - var(--header-height));
+  height: calc(95vh - var(--header-height));
     /* background: none; */
     /* background-color: var(--asideAndHeader-backgroundColorAndOpacity); */
     grid-area: aside;

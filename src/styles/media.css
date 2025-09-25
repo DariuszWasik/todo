@@ -25,7 +25,8 @@
     }
 
     .todo-card{
-        margin: 0 0.8rem !important
+        margin: 0 0.8rem !important;
+        padding: 0.2rem !important
     }
   
     .hamburger svg{
