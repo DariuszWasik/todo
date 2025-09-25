@@ -8,7 +8,13 @@ function createModal() {
     infoModal.className = 'info-modal'
     const paraInfo = document.createElement('p');
     paraInfo.className = 'para-info';
-    paraInfo.textContent = 'costam kurde bedzie napisane w swoim czasie'
+    paraInfo.innerHTML = `
+      <strong>ToDo App</strong><br>
+      Add your tasks and organize them into projects.<br>
+      See what’s due today, this week, or what’s most important.<br>
+      Everything you add stays saved on your device, <br>
+      so it’s still here when you come back.<br>
+    `;
     const closeInfo = document.createElement('button')
     closeInfo.className = 'close-info';
     closeInfo.textContent = 'close'
@@ -17,7 +23,7 @@ function createModal() {
     infoModal.showModal()
     closeInfo.addEventListener('click', () => 
         {
-        // infoModal.close()
+        infoModal.close()
         infoModal.remove()
         }
     )

@@ -5,8 +5,7 @@ import { addProject } from "./add-new-project-button";
 
 import { projectsButtonDisplayingItsTodos } from "./projectBtnDisplayTodos";
 import { addTask } from "./addToDoBtn";
-import { format } from "date-fns";
-import { add } from "date-fns";
+
 import { giveNavigationButtonsFunc } from "./navigationButtons";
 import { displayAllByDates } from "./navigationButtons";
 import { changeMode } from "./lightDarkMode";
@@ -18,6 +17,7 @@ import { info } from "./info";
 
 export function init () {
     console.log('siema')
+    // localStorage.clear()
 // console.log(projectsArr);
 
 
