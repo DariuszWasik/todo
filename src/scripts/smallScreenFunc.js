@@ -1,23 +1,74 @@
 
 // import { Template } from "webpack";
 
-// export function addFunctionalityOnSmallScreen() {
+import { add } from "date-fns/fp";
+
+export {smallScreenFunc, addFunctionalityOnSmallScreen}
+
+
+
+
+// function addFunctionalityOnSmallScreen() {
+//     window.addEventListener('window.innerWidth < 700', () => {console.log('siemanjero heniu')})
+// }
+
+
+
+// function addFunctionalityOnSmallScreen() {
+//   window.addEventListener('resize', () => {
+//     if (window.innerWidth < 700) {
+//       console.log('siemanjero heniu');
+//     }
+//   });
+// }
+function addFunctionalityOnSmallScreen() {
+  let hasRun = false; // flaga dla małego ekranu
+
+  function checkWidth() {
+    if (window.innerWidth < 700 && !hasRun) {
+      console.log("siemanjero heniu");
+      loadActions() // Twoja funkcjonalność
+      hasRun = true;
+    } else if (window.innerWidth >= 700) {
+      // reset flagi, gdy ekran jest duży
+      hasRun = false;
+    }
+  }
+
+  // sprawdzenie przy starcie
+  checkWidth();
+
+  // nasłuchuj resize
+  window.addEventListener("resize", checkWidth);
+}
+
+
+
+
+function loadActions() {
+    console.log('inner width is smaller than 700px')
+    
+}
+
+
+
+
 //     // if(hamburgerSVG.style.display == 'flex'){
 //         // console.log('siema')}
 //     // else console.log('dupa')
 //     const mql = window.matchMedia("(width <= 700px)");
 
-// // mql.onchange = (e) => {
-// //   if (e.matches) {
-// //     /* the viewport is 700 pixels wide or less */
-// //     console.log("This is a narrow screen — less than 700px wide.");
-// //   } else {
-// //     /* the viewport is more than 700 pixels wide */
-// //     console.log("This is a wide screen — more than 700px wide.");
-// //   }
+// mql.onchange = (e) => {
+//   if (e.matches) {
+//     /* the viewport is 700 pixels wide or less */
+//     console.log("This is a narrow screen — less than 700px wide.");
+//   } else {
+//     /* the viewport is more than 700 pixels wide */
+//     console.log("This is a wide screen — more than 700px wide.");
+//   }
+// };
 
 
-// // // };
 // const main = document.querySelector('main')
 // console.log('siema')
 // console.log(window.innerWidth<700 )
@@ -29,7 +80,6 @@
 
 
 
-// }
 const aside = document.querySelector('.aside');
 const main = document.querySelector('main');
 function toggleAsideOpacity() {
@@ -39,7 +89,7 @@ function toggleBlur(){
 main.style.filter = main.style.filter == 'blur(2px)' ? 'none' : 'blur(2px)'
 }
 
-export function smallScreenFunc() {
+function smallScreenFunc() {
     console.log('imported')
     const hamburgerSVG = document.querySelector('.hamburger-svg');
     hamburgerSVG.addEventListener('click', () => {
@@ -78,6 +128,8 @@ export function smallScreenFunc() {
     // main.style.zIndex = '0'
     //     }
     })
+
+    addFunctionalityOnSmallScreen()
 }
 
         // window.addEventListener('window.innerWidth > 758', () => {
