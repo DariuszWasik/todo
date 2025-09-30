@@ -3,9 +3,8 @@
     .aside {
         opacity: 0;
         display: none;
-        grid-row-gap: 1rem;
-        grid-template-rows: 2rem 15ch 3ch 20ch 2rem;
-    }
+        grid-row-gap: 0.5rem;
+grid-template-rows: 2rem 15ch 3ch 1fr 2rem 1rem;    }
 
 
     .content {

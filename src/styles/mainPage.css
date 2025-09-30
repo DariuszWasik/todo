@@ -68,7 +68,7 @@ html, body {
   cursor: pointer;
 }
 .aside {
-  height: calc(95vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
     /* background: none; */
     /* background-color: var(--asideAndHeader-backgroundColorAndOpacity); */
     grid-area: aside;
@@ -78,8 +78,8 @@ html, body {
     align-items: center; */
     /* display: none; */
     display: grid;
-    grid-template-rows: 2rem 1fr 1rem 1fr 2rem;
-    grid-row-gap: 2rem;
+    grid-template-rows: 2rem 15ch 3ch 1fr 2rem;
+    grid-row-gap: 1rem;
     padding: 1rem 1rem;
     text-align: center;
     border-top-right-radius: -2rem;
@@ -102,9 +102,9 @@ html, body {
   color: var(--text-color-pointed)
 }
 .projects-div{
-  margin-top: -1.5rem;
-  height: 30vh;
-  margin-bottom: -2rem;
+  /* margin-top: -1.5rem; */
+  /* height: 30vh; */
+  /* margin-bottom: -2rem; */
   overflow-y: auto;
 }
 
@@ -225,6 +225,7 @@ img path{
   width: 1.5rem;
 }
 
+.projects-title,
 .add-project-div,
 .add-todo-div {
   color: var(--add-todo-add-project-text-color);
@@ -233,7 +234,7 @@ img path{
 
 .projects-title {
   text-align: end;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   /* margin-bottom: 1rem; */
 }
 
