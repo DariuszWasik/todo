@@ -104,7 +104,7 @@ console.log(projectsArr);
 const callDoctor = new ToDo(
   'call doctor',
   'ask about Ania’s prescription',
-  format(add(new Date(), { days: -3 }), 'eee, dd MMM yyy'),
+  format(add(new Date(), { days: -3 }), 'dd.MM.yy'),
   'high',
   projectsArr[2].id
 );
@@ -114,7 +114,7 @@ callDoctor.assignToProject();
 const energySurvey = new ToDo(
   'call energy company',
   'take part in survey',
-  format(new Date(), 'eee, dd MMM yyy'),
+  format(new Date(), 'dd.MM.yy'),
   'high',
   projectsArr[2].id
 );
@@ -124,7 +124,7 @@ energySurvey.assignToProject();
 const taxReturn = new ToDo(
   'file tax return',
   'try to get child allowance',
-  format(add(new Date(), { days: 6 }), 'eee, dd MMM yyy'),
+  format(add(new Date(), { days: 6 }), 'dd.MM.yy'),
   'low',
   projectsArr[0].id
 );

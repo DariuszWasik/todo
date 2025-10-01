@@ -36,7 +36,8 @@ export { cancelNewTodo, addNewTodo }
             }
             else {
         const projectToGo = projectsArr.filter(a => a.name == selectInput.value);
-        const newTodo = new ToDo (nameInput.value, descInput.value, format(new Date(dateInput.value), 'eee, dd MMM yyy'),priorityInput.value, projectToGo[0].id);
+        // const newTodo = new ToDo (nameInput.value, descInput.value, format(new Date(dateInput.value), 'eee, dd MMM yyy'),priorityInput.value, projectToGo[0].id);
+        const newTodo = new ToDo (nameInput.value, descInput.value, format(new Date(dateInput.value), 'dd.MM.yy'),priorityInput.value, projectToGo[0].id);
         console.log(newTodo)
         newTodo.assignToProject();
         putAllTodosInAllTodosArray()
